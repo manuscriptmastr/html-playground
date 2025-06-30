@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
+      *,
+      *::after,
+      *::before {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      main {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Libre Baskerville";
+        line-height: 1.5;
+      }
+
+      .popover {
+        aspect-ratio: 1/1;
+        border-radius: 999px;
+        overflow: hidden;
+        position: absolute;
+        top: anchor(bottom);
+        left: anchor(center);
+        justify-self: anchor-center;
+        margin: 0;
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        background-color: transparent;
+        width: 50vmax;
+
+        &::before {
+          position: absolute;
+          pointer-events: none;
+          content: "";
+          top: -25%;
+          left: -25%;
+          height: 150%;
+          width: 150%;
+          z-index: -1;
+          backdrop-filter: blur(0.5rem) brightness(110%);
+        }
+      }
+
+      #button-one {
+        anchor-name: --button-one;
+      }
+
+      #popover-one {
+        position-anchor: --button-one;
+      }
+
+      #button-two {
+        anchor-name: --button-two;
+      }
+
+      #popover-two {
+        position-anchor: --button-two;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      Now all the earth used
+      <button class="button" id="button-one" popovertarget="popover-one">
+        one
+      </button>
+      lip and
+      <button class="button" id="button-one" popovertarget="popover-one">
+        one
+      </button>
+      [set of] words.
+      <div class="popover" id="popover-one" popover>
+        Genesis 2:23 — For this reason a man will leave his father and mother
+        and be
+        <strong>united</strong> to his wife.
+        <br />
+        Ezekiel 37:25 — So that they may become <strong>one</strong> in your
+        hand.
+      </div>
+      <br />
+      And it came about, as they journeyed east, that they found a plain in the
+      land of Shinar and settled there.
+      <br />
+      Then they said to one another, "Come, let's brick bricks and fire them
+      thoroughly." And they used brick for stone, and they used tar for mortar.
+      <br />
+      And they said, "Come, let's build ourselves a city, and a tower whose head
+      [will reach] into heaven, and let's make a name for ourselves; otherwise
+      we will be scattered abroad over the face of all the earth."
+      <br />
+      Now the Lord came down to see the city and the tower which the sons of men
+      had built.
+      <br />
+      And the Lord said, "Behold, they are one people, and they all have one
+      lip. And this is what they have started to do, and now nothing which they
+      plan to do will be impossible for them which they purpose to do.
+      <br />
+      "Come, let us go down and there confuse their lip, so that they will not
+      <button class="button" id="button-two" popovertarget="popover-two">
+        understand
+      </button>
+      one another's lip."
+      <div class="popover" popover id="popover-two">
+        Genesis 3:24 — Because you have <strong>listened</strong> to the voice
+        of your wife.
+        <br />
+        Genesis 16:3 — Abraham <strong>listened</strong> to the voice of his
+        wife.
+      </div>
+      <br />
+      So the Lord scattered them abroad from there over the face of all the
+      earth; and they stopped building the city.
+      <br />
+      Therefore it was named Babel, because there the Lord confused the lip of
+      all the earth; and from there the Lord scattered them abroad over the face
+      of all the earth.
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/currency.js@2.0.4/dist/currency.min.js"></script>
+    <script type="importmap">
+      {
+        "imports": {
+          "lit-html": "https://cdn.jsdelivr.net/npm/lit-html@3.2.1/lit-html.min.js",
+          "lit-html/": "https://cdn.jsdelivr.net/npm/lit-html@3.2.1/",
+          "ramda": "https://cdn.jsdelivr.net/npm/ramda@0.30.1/es/index.js"
+        }
+      }
+    </script>
+  </body>
+</html>
