@@ -4,10 +4,6 @@ const $parent = document.querySelector('main');
 const $chapter = document.createElement('article');
 $parent.appendChild($chapter);
 
-const $header = document.createElement('h1');
-$header.textContent = 'Genesis 15 — Abram Promised a Son';
-$chapter.appendChild($header);
-
 for (const verse of chapter.data) {
   const $verse = document.createElement('p');
   $verse.textContent = verse.text;

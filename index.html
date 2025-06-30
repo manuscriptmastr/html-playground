@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insight</title>
     <style>
+      @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap");
+
       *,
       *::after,
       *::before {
@@ -21,24 +23,32 @@
         padding: 0;
       }
 
+      body {
+        padding-inline: 1.5rem;
+        font-family: "Libre Baskerville";
+        line-height: 1.75;
+      }
+
       body > * + * {
         border-top: 1px solid black;
       }
 
       header,
+      main,
       footer {
-        text-align: center;
-        padding: 1rem;
+        margin-inline: auto;
+        padding-block: 1rem;
+        width: min(70ch, 100%);
       }
 
-      main {
-        margin-inline: auto;
-        width: min(70ch, 100%);
+      header,
+      footer {
+        text-align: center;
       }
     </style>
   </head>
   <body>
-    <header>Insight</header>
+    <header><h1>Genesis 15 — Abram Promised a Son</h1></header>
     <main></main>
     <footer>Genesis 15</footer>
     <script type="importmap">
