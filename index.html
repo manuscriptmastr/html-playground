@@ -15,8 +15,7 @@
       }
 
       html,
-      body,
-      main {
+      body {
         width: 100%;
         min-height: 100%;
         margin: 0;
@@ -24,36 +23,17 @@
       }
 
       body {
-        padding-inline: 1.5rem;
         font-family: "Libre Baskerville";
         line-height: 1.75;
-      }
-
-      body > * + * {
-        border-top: 1px solid black;
-      }
-
-      header,
-      main,
-      footer {
-        margin-inline: auto;
-        padding-block: 1rem;
-        width: min(70ch, 100%);
-      }
-
-      header,
-      footer {
-        text-align: center;
       }
     </style>
   </head>
   <body>
-    <header><h1>Genesis 15 — Abram Promised a Son</h1></header>
-    <main></main>
-    <footer>Genesis 15</footer>
+    <insight-app></insight-app>
     <script type="importmap">
       {
         "imports": {
+          "lit": "https://cdn.jsdelivr.net/npm/lit@3.3.0/+esm",
           "lit-html": "https://cdn.jsdelivr.net/npm/lit-html@3.3.0/lit-html.min.js",
           "lit-html/": "https://cdn.jsdelivr.net/npm/lit-html@3.3.0/",
           "ramda": "https://cdn.jsdelivr.net/npm/ramda@0.31.3/es/index.js"
