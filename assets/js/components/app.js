@@ -21,7 +21,7 @@ export class App extends LitElement {
     footer {
       margin-inline: auto;
       padding-block: 1rem;
-      width: min(70ch, 100%);
+      width: min(60ch, 100%);
     }
 
     header,
@@ -39,16 +39,16 @@ export class App extends LitElement {
 
   constructor() {
     super();
-    this.version = VERSIONS[0].id;
+    this.version = VERSIONS[2].id;
     this.book = 'genesis';
     this.chapter = 15;
     this.verses = [];
+    this.updateVerses();
   }
 
-  updated(props) {
-    if (props.has('version') || props.has('book') || props.has('chapter')) {
-      this.updateVerses();
-    }
+  async updateVersion(value) {
+    this.version = value;
+    await this.updateVerses();
   }
 
   async updateVerses() {
@@ -60,8 +60,8 @@ export class App extends LitElement {
     return html`
       <header>
         <h1>${this.book} ${this.chapter}</h1>
-        <select>${VERSIONS.map(({ id, localVersionName }) => html`
-          <option value=${id}>${localVersionName}</option>
+        <select name="version" @change=${(e) => this.updateVersion(e.target.value)}>${VERSIONS.map(({ id, localVersionName }) => html`
+          <option value=${id} ?selected=${id === this.version}>${localVersionName}</option>
           `)}
         </select>
       </header>
